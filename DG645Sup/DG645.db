@@ -1,0 +1,268 @@
+
+# Common IEEE-488.2 Commands
+
+record(stringin, "$(P)$(R)IDN")
+{
+    field(DESC, "SCPI identification string")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getIDN(39) $(PORT) $(A)")
+    field(PINI, "YES")
+}
+
+record(waveform, "$(P)$(R)IDNwf")
+{
+    field(DESC, "SCPI identification string")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getIDN(199) $(PORT) $(A)")
+    field(PINI, "YES")
+    field(FTVL, "CHAR")
+    field(NELM, "200")
+}
+
+record(bo, "$(P)$(R)CLS")
+{
+    field(DESC, "SCPI Clear status")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto cmd(*CLS) $(PORT) $(A)")
+}
+
+record(longout, "$(P)$(R)SetESE")
+{
+    field(DESC, "SCPI enable event status")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setD(*ESE) $(PORT) $(A)")
+}
+
+record(longin, "$(P)$(R)GetESE")
+{
+    field(DESC, "SCPI enabled event status")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(*ESE) $(PORT) $(A)")
+}
+
+record(longin, "$(P)$(R)GetESR")
+{
+    field(DESC, "Standard Event Status Register")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(*ESR) $(PORT) $(A)")
+}
+
+record(longin, "$(P)$(R)GetOPC")
+{
+    field(DESC, "Output completion status")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(*OPC) $(PORT) $(A)")
+}
+
+record(longout, "$(P)$(R)SetPSC")
+{
+    field(DESC, "Power-on Status Clear")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setD(*PSC) $(PORT) $(A)")
+}
+
+record(longin, "$(P)$(R)GetPSC")
+{
+    field(DESC, "Power-on Status Clear")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(*PSC?) $(PORT) $(A)")
+}
+
+record(longout, "$(P)$(R)RCL")
+{
+    field(DESC, "Recall Instrument Settings")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setD(*PSC) $(PORT) $(A)")
+}
+
+record(bo, "$(P)$(R)RST")
+{
+    field(DESC, "SCPI Reset")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto cmd(*RST) $(PORT) $(A)")
+}
+
+record(longout, "$(P)$(R)SetSRE")
+{
+    field(DESC, "SCPI enable service requests")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setD(*SRE) $(PORT) $(A)")
+}
+
+record(longin, "$(P)$(R)GetSRE")
+{
+    field(DESC, "Enabled service requests")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(*SRE) $(PORT) $(A)")
+}
+
+record(longin, "$(P)$(R)GetSTB")
+{
+    field(DESC, "SCPI get status byte")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(*STB) $(PORT) $(A)")
+}
+
+record(bo, "$(P)$(R)TRG")
+{
+    field(DESC, "Trigger a Delay")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto cmd(*TRG) $(PORT) $(A)")
+}
+
+record(longin, "$(P)$(R)GetTST")
+{
+    field(DESC, "Trigger a Delay")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(*TST) $(PORT) $(A)")
+}
+
+record(bo, "$(P)$(R)WAI")
+{
+    field(DESC, "Wait for Command Execution")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto cmd(*WAI) $(PORT) $(A)")
+}
+
+# Status and Display Commands
+
+record(mbbo, "$(P)$(R)SHDP")
+{
+    field(DESC, "Set Show Display")
+    field(ZRST, "Hide")
+    field(ONST, "Show")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setD(SHDP) $(PORT) $(A)")
+}
+
+record(mbbi, "$(P)$(R)SHDP_RBV")
+{
+    field(DESC, "Get Show Display")
+    field(ZRST, "Hide")
+    field(ONST, "Show")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(SHDP?) $(PORT) $(A)")
+}
+
+record(mbbi, "$(P)$(R)TIMB_RBV") {
+  field(DESC, "Time interval")
+  field(ZRST, "Internal timebase")
+  field(ONST, "OCXO timebase")
+  field(TWST, "Rubidium timebase")
+  field(THST, "External timebase")
+  field(DTYP, "stream")
+  field(INP,  "@DG645.proto getD(TIMB) $(PORT) $(A)")
+}
+
+# Trigger Commands
+
+record(mbbo, "$(P)$(R)ADVT")
+{
+    field(DESC, "Set Advanced Triggering Mode Enable")
+    field(ZRST, "Disable")
+    field(ONST, "Enable")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setD(*ADVT) $(PORT) $(A)")
+}
+
+record(mbbi, "$(P)$(R)ADVT_RBV")
+{
+    field(DESC, "Get Advanced Triggering Mode Enable")
+    field(ZRST, "Disable")
+    field(ONST, "Enable")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(*ADVT) $(PORT) $(A)")
+}
+
+record(ao, "$(P)$(R)HOLD")
+{
+    field(DESC, "Set Holdoff")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setD(*ADVT) $(PORT) $(A)")
+}
+
+record(ai, "$(P)$(R)HOLD_RBV")
+{
+    field(DESC, "Get Holdoff")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(*ADVT) $(PORT) $(A)")
+}
+
+record(longout, "$(P)$(R)SetINHB")
+{
+    field(DESC, "Get inhibit")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setD(*SRE) $(PORT) $(A)")
+}
+
+record(longin, "$(P)$(R)GetINHB")
+{
+    field(DESC, "Set inhibit")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getD(*SRE) $(PORT) $(A)")
+}
+
+# Burst Commands
+
+
+# Delay and Output Commands
+
+record(mbbo, "$(P)$(R)OutputBNC")
+{
+    field(DESC, "")
+    field(VAL,0)
+    field(ZRST, "T0")
+    field(ONST, "AB")
+    field(TWST, "CD")
+    field(THST, "EF")
+    field(FRST, "GH")
+}
+
+record(mbbo, "$(P)$(R)ChannelEdge")
+{
+    field(DESC, "")
+    field(VAL,2)
+    field(ZRST, "T0")
+    field(ONST, "T1")
+    field(TWST, "A")
+    field(THST, "B")
+    field(FRST, "C")
+    field(FVST, "D")
+    field(SXST, "E")
+    field(SVST, "F")
+    field(EIST, "G")
+    field(NIST, "H")
+}
+
+record(mbbo, "$(P)$(R)ChannelLink")
+{
+    field(DESC, "")
+    field(VAL,2)
+    field(ZRST, "T0")
+    field(ONST, "T1")
+    field(TWST, "A")
+    field(THST, "B")
+    field(FRST, "C")
+    field(FVST, "D")
+    field(SXST, "E")
+    field(SVST, "F")
+    field(EIST, "G")
+    field(NIST, "H")
+}
+
+record(ao, "$(P)$(R)DLAY") 
+{
+    field(DESC, "Set delay")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto delay($(P)$(R)) $(PORT) $(A)")  
+    field(VAL,1e-6)
+    field(EGU,"s")
+    field (PREC, "9")
+    field (DRVL, "0")
+    field (DRVH, "1")
+    field (LOPR, "0")
+    field (HOPR, "1") 
+}
+
+
+# Interface Commands

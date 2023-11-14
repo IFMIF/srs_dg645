@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2023-11-14 03:26:12 by fb250757-->
+<display version="2.0.0">
+  <name>Display</name>
+  <macros>
+    <P>DCU07:</P>
+    <R>DG645:</R>
+  </macros>
+  <width>540</width>
+  <height>141</height>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(R)IDN</pv_name>
+    <x>100</x>
+    <y>20</y>
+    <width>180</width>
+    <height>19</height>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box</name>
+    <pv_name>$(P)$(R)OutputBNC</pv_name>
+    <y>91</y>
+    <width>80</width>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_1</name>
+    <pv_name>$(P)$(R)ChannelEdge</pv_name>
+    <x>100</x>
+    <y>91</y>
+    <width>80</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(P)$(R)DLAY</pv_name>
+    <x>300</x>
+    <y>91</y>
+    <width>240</width>
+    <height>30</height>
+    <format>3</format>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_2</name>
+    <pv_name>$(P)$(R)ChannelLink</pv_name>
+    <x>200</x>
+    <y>91</y>
+    <width>80</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>BNC</text>
+    <y>60</y>
+    <width>80</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Edge</text>
+    <x>100</x>
+    <y>60</y>
+    <width>80</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Link</text>
+    <x>200</x>
+    <y>60</y>
+    <width>80</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Delay</text>
+    <x>300</x>
+    <y>60</y>
+    <width>80</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>IDN</text>
+    <y>20</y>
+  </widget>
+</display>
