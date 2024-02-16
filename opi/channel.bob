@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-02-16 07:40:33 by fb250757-->
+<display version="2.0.0">
+  <name>Channel</name>
+  <width>360</width>
+  <height>60</height>
+  <widget type="group" version="3.0.0">
+    <name>Channel $(N)</name>
+    <width>360</width>
+    <height>60</height>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Delay</text>
+      <x>2</x>
+      <y>2</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(R)$(N)Delay_RBV</pv_name>
+      <x>112</x>
+      <y>2</y>
+      <width>210</width>
+    </widget>
+  </widget>
+</display>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-02-16 06:34:06 by fb250757-->
+<display version="2.0.0">
+  <name>Output</name>
+  <width>360</width>
+  <height>120</height>
+  <widget type="group" version="3.0.0">
+    <name>$(N)</name>
+    <width>360</width>
+    <height>120</height>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Amplitude</text>
+      <x>2</x>
+      <y>2</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>$(P)$(R)$(N)LAMP</pv_name>
+      <x>112</x>
+      <y>2</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(R)$(N)LAMP_RBV</pv_name>
+      <x>222</x>
+      <y>2</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <x>112</x>
+      <y>32</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Offset</text>
+      <x>2</x>
+      <y>32</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P)$(R)$(N)LOFF_RBV</pv_name>
+      <x>222</x>
+      <y>32</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Polarity</text>
+      <x>2</x>
+      <y>62</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_2</name>
+      <x>112</x>
+      <y>62</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(P)$(R)$(N)LPOL_RBV</pv_name>
+      <x>222</x>
+      <y>62</y>
+    </widget>
+  </widget>
+</display>

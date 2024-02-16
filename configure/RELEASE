@@ -27,7 +27,7 @@ SUPPORT = /local/home/fb250757/Documents/EPICS/support/
 # If using the sequencer, point SNCSEQ at its top directory:
 SNCSEQ = $(SUPPORT)/seq-2.2.8
 STREAM = $(SUPPORT)/StreamDevice-2.8.16
-ASYN =  $(SUPPORT)/asyn-4.38
+ASYN =  $(SUPPORT)/asyn-4.44.2
 CALC=$(SUPPORT)/calc-3.7.4
 
 # EPICS_BASE should appear last so earlier modules can override stuff:

@@ -36,3 +36,30 @@ getWF {
 delay {
     out "DLAY %(\$1ChannelEdge)d,%(\$1ChannelLink)d,%e";
 }
+
+setDoutput {
+    out "\$1 \$2,%d";
+}
+
+getDoutput {
+    out "\$1?\$2";
+    in "%d";
+    ExtraInput = Ignore;
+}
+
+setDchannel {
+    out "\$1 \$2,%d";
+}
+
+getDchannel {
+    out "\$1?\$2";
+    in "%d";
+    ExtraInput = Ignore;
+}
+
+getDelay
+{    
+    out "DLAY?\$2";
+    in "%\$1[^\n]";
+    ExtraInput = Ignore;
+}

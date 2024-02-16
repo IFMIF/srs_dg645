@@ -16,7 +16,7 @@ DG645_DBD += stream.dbd
 DG645_DBD += asyn.dbd
 DG645_DBD += drvAsynSerialPort.dbd
 DG645_DBD += drvAsynIPPort.dbd
-DG645_DBD += drvAsynUSBTMC.dbd
+#DG645_DBD += drvAsynUSBTMC.dbd
 
 # Link in the code from our support library
 DG645_LIBS += calc stream asyn

@@ -1,80 +1,282 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-11-14 03:26:12 by fb250757-->
+<!--Saved on 2024-02-16 08:05:10 by fb250757-->
 <display version="2.0.0">
   <name>Display</name>
   <macros>
     <P>DCU07:</P>
     <R>DG645:</R>
   </macros>
-  <width>540</width>
-  <height>141</height>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update</name>
-    <pv_name>$(P)$(R)IDN</pv_name>
-    <x>100</x>
-    <y>20</y>
-    <width>180</width>
-    <height>19</height>
-  </widget>
+  <width>900</width>
+  <height>850</height>
   <widget type="combo" version="2.0.0">
     <name>Combo Box</name>
     <pv_name>$(P)$(R)OutputBNC</pv_name>
-    <y>91</y>
+    <x>360</x>
+    <y>51</y>
     <width>80</width>
+    <height>20</height>
   </widget>
   <widget type="combo" version="2.0.0">
     <name>Combo Box_1</name>
     <pv_name>$(P)$(R)ChannelEdge</pv_name>
-    <x>100</x>
-    <y>91</y>
+    <x>460</x>
+    <y>51</y>
     <width>80</width>
+    <height>20</height>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry</name>
     <pv_name>$(P)$(R)DLAY</pv_name>
-    <x>300</x>
-    <y>91</y>
+    <x>660</x>
+    <y>51</y>
     <width>240</width>
-    <height>30</height>
     <format>3</format>
   </widget>
   <widget type="combo" version="2.0.0">
     <name>Combo Box_2</name>
     <pv_name>$(P)$(R)ChannelLink</pv_name>
-    <x>200</x>
-    <y>91</y>
+    <x>560</x>
+    <y>51</y>
     <width>80</width>
+    <height>20</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_1</name>
     <text>BNC</text>
-    <y>60</y>
+    <x>360</x>
+    <y>20</y>
     <width>80</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_2</name>
     <text>Edge</text>
-    <x>100</x>
-    <y>60</y>
+    <x>460</x>
+    <y>20</y>
     <width>80</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_3</name>
     <text>Link</text>
-    <x>200</x>
-    <y>60</y>
+    <x>560</x>
+    <y>20</y>
     <width>80</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_4</name>
     <text>Delay</text>
-    <x>300</x>
-    <y>60</y>
+    <x>660</x>
+    <y>20</y>
     <width>80</width>
   </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_5</name>
-    <text>IDN</text>
-    <y>20</y>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)$(R)TRG</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Send Trigger</text>
+    <x>760</x>
+    <y>90</y>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="template" version="2.0.0">
+    <name>Template/Instance</name>
+    <file>output.bob</file>
+    <instances>
+      <instance>
+        <macros>
+          <N>T0:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>AB:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>CD:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>EF:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>GH:</N>
+        </macros>
+      </instance>
+    </instances>
+    <y>210</y>
+    <width>360</width>
+    <height>640</height>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Info</name>
+    <width>360</width>
+    <height>210</height>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(R)IDN</pv_name>
+      <x>112</x>
+      <y>2</y>
+      <width>210</width>
+      <height>19</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>IDN</text>
+      <x>2</x>
+      <y>2</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>ESE</text>
+      <x>2</x>
+      <y>32</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(P)$(R)GetESE</pv_name>
+      <x>222</x>
+      <y>32</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <x>112</x>
+      <y>32</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_7</name>
+      <text>ESR</text>
+      <x>2</x>
+      <y>62</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_8</name>
+      <text>OPC</text>
+      <x>2</x>
+      <y>92</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_4</name>
+      <pv_name>$(P)$(R)GetOPC</pv_name>
+      <x>222</x>
+      <y>92</y>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor</name>
+      <pv_name>$(P)$(R)GetESR</pv_name>
+      <x>112</x>
+      <y>62</y>
+      <width>210</width>
+      <square>true</square>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_9</name>
+      <text>STB</text>
+      <x>2</x>
+      <y>122</y>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_1</name>
+      <pv_name>$(P)$(R)GetSTB</pv_name>
+      <x>112</x>
+      <y>122</y>
+      <width>210</width>
+      <square>true</square>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text>Timebase</text>
+      <x>2</x>
+      <y>152</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_5</name>
+      <pv_name>$(P)$(R)TIMB_RBV</pv_name>
+      <x>222</x>
+      <y>152</y>
+    </widget>
+  </widget>
+  <widget type="template" version="2.0.0">
+    <name>Template/Instance_1</name>
+    <file>channel.bob</file>
+    <instances>
+      <instance>
+        <macros>
+          <N>t0:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>t1:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>a:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>b:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>c:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>d:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>e:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>f:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>g:</N>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <N>h:</N>
+        </macros>
+      </instance>
+    </instances>
+    <x>370</x>
+    <y>130</y>
+    <width>360</width>
+    <height>690</height>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_3</name>
+    <pv_name>$(P)$(R)TSRC</pv_name>
+    <x>740</x>
+    <y>160</y>
+    <width>290</width>
+    <height>20</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P)$(R)TSRC_RBV</pv_name>
+    <x>750</x>
+    <y>200</y>
   </widget>
 </display>

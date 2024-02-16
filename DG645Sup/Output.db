@@ -1,0 +1,41 @@
+record(ao, "$(P)$(R)$(N)LAMP")
+{
+    field(DESC, "Level Amplitude")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setDoutput(LAMP,$(ID)) $(PORT) $(A)")
+    field(FLNK, "$(P)$(R)$(N)LAMP_RBV")
+}
+
+record(ai, "$(P)$(R)$(N)LAMP_RBV")
+{
+    field(DESC, "Level Amplitude")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getDoutput(LAMP,$(ID)) $(PORT) $(A)")
+    field(PINI, "YES")
+}
+
+record(ao, "$(P)$(R)$(N)LOFF")
+{
+    field(DESC, "Level Amplitude")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setDoutput(LOFF,$(ID)) $(PORT) $(A)")
+    field(FLNK, "$(P)$(R)$(N)LOFF_RBV")
+}
+
+record(ai, "$(P)$(R)$(N)LOFF_RBV")
+{
+    field(DESC, "Level Offset")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getDoutput(LOFF,$(ID)) $(PORT) $(A)")
+    field(PINI, "YES")
+}
+
+record(bi, "$(P)$(R)$(N)LPOL_RBV")
+{
+    field(DESC, "Level Polarity")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getDoutput(LPOL,$(ID)) $(PORT) $(A)")
+    field(PINI, "YES")
+    field(ZNAM, "Negative")
+    field(ONAM, "Positive")
+}

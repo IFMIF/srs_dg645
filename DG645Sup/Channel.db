@@ -1,0 +1,24 @@
+record(stringin, "$(P)$(R)$(N)Delay_RBV")
+{
+    field(DESC, "Delay string")
+    field(DTYP, "stream")
+    field(INP,  "@DG645.proto getDelay(39,$(ID)) $(PORT) $(A)")
+    field(PINI, "YES")
+    field(SCAN, "1 second")
+}
+
+#record(mbbi, "$(P)$(R)$(N)ChannelLink_RBV")
+#{
+#    field(DESC, "Channel link")
+#    field(DTYP, "stream")
+#    field(ZRST, "T0")
+#    field(ONST, "T1")
+#    field(TWST, "A")
+#    field(THST, "B")
+#    field(FRST, "C")
+#    field(FVST, "D")
+#    field(SXST, "E")
+#    field(SVST, "F")
+#    field(EIST, "G")
+#    field(NIST, "H")
+#}
