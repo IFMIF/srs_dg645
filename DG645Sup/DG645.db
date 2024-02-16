@@ -275,7 +275,7 @@ record(mbbo, "$(P)$(R)ChannelEdge")
 record(mbbo, "$(P)$(R)ChannelLink")
 {
     field(DESC, "")
-    field(VAL,2)
+    field(VAL,0)
     field(ZRST, "T0")
     field(ONST, "T1")
     field(TWST, "A")

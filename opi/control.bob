@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-02-16 10:41:35 by fb250757-->
+<display version="2.0.0">
+  <name>Display</name>
+  <width>460</width>
+  <height>150</height>
+  <widget type="group" version="3.0.0">
+    <name>Control</name>
+    <width>460</width>
+    <height>150</height>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_1</name>
+      <pv_name>$(P)$(R)ChannelEdge</pv_name>
+      <x>2</x>
+      <y>32</y>
+      <height>20</height>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>$(P)$(R)DLAY</pv_name>
+      <x>222</x>
+      <y>32</y>
+      <width>200</width>
+      <format>3</format>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_2</name>
+      <pv_name>$(P)$(R)ChannelLink</pv_name>
+      <x>112</x>
+      <y>32</y>
+      <height>20</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Edge</text>
+      <x>2</x>
+      <y>2</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Reference</text>
+      <x>112</x>
+      <y>2</y>
+      <width>80</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>Delay</text>
+      <x>222</x>
+      <y>2</y>
+      <width>80</width>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)$(R)TRG</pv_name>
+          <value>0</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <text>Send Trigger</text>
+      <x>112</x>
+      <y>92</y>
+      <width>210</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_3</name>
+      <pv_name>$(P)$(R)TSRC</pv_name>
+      <x>112</x>
+      <y>62</y>
+      <height>20</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P)$(R)TSRC_RBV</pv_name>
+      <x>222</x>
+      <y>62</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>Trigger</text>
+      <x>2</x>
+      <y>62</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>Single shot</text>
+      <x>2</x>
+      <y>92</y>
+    </widget>
+  </widget>
+</display>

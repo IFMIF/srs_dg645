@@ -60,6 +60,6 @@ getDchannel {
 getDelay
 {    
     out "DLAY?\$2";
-    in "%\$1[^\n]";
+    in "%(\$1ChannelLink_RBV)d,%f";
     ExtraInput = Ignore;
 }

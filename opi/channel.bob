@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-16 07:40:33 by fb250757-->
+<!--Saved on 2024-02-16 10:37:06 by fb250757-->
 <display version="2.0.0">
   <name>Channel</name>
-  <width>360</width>
+  <width>470</width>
   <height>60</height>
   <widget type="group" version="3.0.0">
     <name>Channel $(N)</name>
-    <width>360</width>
+    <width>470</width>
     <height>60</height>
     <widget type="label" version="2.0.0">
       <name>Label</name>
@@ -17,9 +17,25 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update</name>
       <pv_name>$(P)$(R)$(N)Delay_RBV</pv_name>
+      <x>172</x>
+      <y>2</y>
+      <width>150</width>
+      <format>1</format>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P)$(R)$(N)ChannelLink_RBV</pv_name>
       <x>112</x>
       <y>2</y>
-      <width>210</width>
+      <width>50</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(P)$(R)$(N)Delay_RBV</pv_name>
+      <x>332</x>
+      <y>2</y>
+      <format>3</format>
+      <precision>3</precision>
     </widget>
   </widget>
 </display>

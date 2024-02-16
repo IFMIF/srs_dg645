@@ -1,24 +1,44 @@
-record(stringin, "$(P)$(R)$(N)Delay_RBV")
+record(ai, "$(P)$(R)$(N)Delay_RBV")
 {
     field(DESC, "Delay string")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getDelay(39,$(ID)) $(PORT) $(A)")
+    field(INP,  "@DG645.proto getDelay($(P)$(R)$(N),$(ID)) $(PORT) $(A)")
     field(PINI, "YES")
     field(SCAN, "1 second")
+    field (PREC, "12")
+
 }
 
-#record(mbbi, "$(P)$(R)$(N)ChannelLink_RBV")
-#{
-#    field(DESC, "Channel link")
-#    field(DTYP, "stream")
-#    field(ZRST, "T0")
-#    field(ONST, "T1")
-#    field(TWST, "A")
-#    field(THST, "B")
-#    field(FRST, "C")
-#    field(FVST, "D")
-#    field(SXST, "E")
-#    field(SVST, "F")
-#    field(EIST, "G")
-#    field(NIST, "H")
-#}
+record(mbbo, "$(P)$(R)$(N)ChannelLink")
+{
+    field(DESC, "Channel link")
+    field(DTYP, "stream")
+    field(OUT,  "@DG645.proto setDchannel(LINK,$(ID)) $(PORT) $(A)")
+    field(ZRST, "T0")
+    field(ONST, "T1")
+    field(TWST, "A")
+    field(THST, "B")
+    field(FRST, "C")
+    field(FVST, "D")
+    field(SXST, "E")
+    field(SVST, "F")
+    field(EIST, "G")
+    field(NIST, "H")
+}
+
+record(mbbi, "$(P)$(R)$(N)ChannelLink_RBV")
+{
+    field(DESC, "Channel link")
+    #field(DTYP, "stream")
+    #field(INP,  "@DG645.proto getDchannel(LINK,$(ID)) $(PORT) $(A)")
+    field(ZRST, "T0")
+    field(ONST, "T1")
+    field(TWST, "A")
+    field(THST, "B")
+    field(FRST, "C")
+    field(FVST, "D")
+    field(SXST, "E")
+    field(SVST, "F")
+    field(EIST, "G")
+    field(NIST, "H")
+}

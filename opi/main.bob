@@ -1,88 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-16 08:05:10 by fb250757-->
+<!--Saved on 2024-02-16 10:42:33 by fb250757-->
 <display version="2.0.0">
   <name>Display</name>
   <macros>
     <P>DCU07:</P>
     <R>DG645:</R>
   </macros>
-  <width>900</width>
+  <width>1060</width>
   <height>850</height>
-  <widget type="combo" version="2.0.0">
-    <name>Combo Box</name>
-    <pv_name>$(P)$(R)OutputBNC</pv_name>
-    <x>360</x>
-    <y>51</y>
-    <width>80</width>
-    <height>20</height>
-  </widget>
-  <widget type="combo" version="2.0.0">
-    <name>Combo Box_1</name>
-    <pv_name>$(P)$(R)ChannelEdge</pv_name>
-    <x>460</x>
-    <y>51</y>
-    <width>80</width>
-    <height>20</height>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry</name>
-    <pv_name>$(P)$(R)DLAY</pv_name>
-    <x>660</x>
-    <y>51</y>
-    <width>240</width>
-    <format>3</format>
-  </widget>
-  <widget type="combo" version="2.0.0">
-    <name>Combo Box_2</name>
-    <pv_name>$(P)$(R)ChannelLink</pv_name>
-    <x>560</x>
-    <y>51</y>
-    <width>80</width>
-    <height>20</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_1</name>
-    <text>BNC</text>
-    <x>360</x>
-    <y>20</y>
-    <width>80</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_2</name>
-    <text>Edge</text>
-    <x>460</x>
-    <y>20</y>
-    <width>80</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_3</name>
-    <text>Link</text>
-    <x>560</x>
-    <y>20</y>
-    <width>80</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_4</name>
-    <text>Delay</text>
-    <x>660</x>
-    <y>20</y>
-    <width>80</width>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button</name>
-    <actions>
-      <action type="write_pv">
-        <pv_name>$(P)$(R)TRG</pv_name>
-        <value>0</value>
-        <description>WritePV</description>
-      </action>
-    </actions>
-    <text>Send Trigger</text>
-    <x>760</x>
-    <y>90</y>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
   <widget type="template" version="2.0.0">
     <name>Template/Instance</name>
     <file>output.bob</file>
@@ -260,23 +185,18 @@
         </macros>
       </instance>
     </instances>
-    <x>370</x>
-    <y>130</y>
-    <width>360</width>
-    <height>690</height>
+    <x>360</x>
+    <y>230</y>
+    <width>450</width>
+    <height>600</height>
+    <gap>0</gap>
   </widget>
-  <widget type="combo" version="2.0.0">
-    <name>Combo Box_3</name>
-    <pv_name>$(P)$(R)TSRC</pv_name>
-    <x>740</x>
-    <y>160</y>
-    <width>290</width>
-    <height>20</height>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_1</name>
-    <pv_name>$(P)$(R)TSRC_RBV</pv_name>
-    <x>750</x>
-    <y>200</y>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <file>control.bob</file>
+    <x>360</x>
+    <width>460</width>
+    <height>150</height>
+    <resize>2</resize>
   </widget>
 </display>
