@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-16 10:42:33 by fb250757-->
+<!--Saved on 2024-02-23 08:22:18 by fb250757-->
 <display version="2.0.0">
   <name>Display</name>
   <macros>
@@ -187,7 +187,7 @@
     </instances>
     <x>360</x>
     <y>230</y>
-    <width>450</width>
+    <width>470</width>
     <height>600</height>
     <gap>0</gap>
   </widget>
@@ -195,8 +195,21 @@
     <name>Embedded Display</name>
     <file>control.bob</file>
     <x>360</x>
+    <y>60</y>
     <width>460</width>
     <height>150</height>
     <resize>2</resize>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>DG645</text>
+    <x>370</x>
+    <y>10</y>
+    <width>440</width>
+    <height>50</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
   </widget>
 </display>
