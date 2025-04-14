@@ -29,4 +29,4 @@ make
 
 ## Usage
 
-A soft IOC is available. Edit the `iocBoot\iocDG645\st.cmd` with the correct IP.
+A soft IOC is available. Edit the `iocBoot/iocDG645/st.cmd` with the correct IP.

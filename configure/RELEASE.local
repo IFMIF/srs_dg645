@@ -1,0 +1,36 @@
+EPICS_BASE=/opt/epics-7.0/base
+SUPPORT=/opt/epics-7.0/support
+
+# Location of the EPICS support modules.
+#
+# WARNING: if you add new entries here, be extremely careful that there are no white spaces at the end of each line,
+# otherwise compilation will fail spectacularly.
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Use our own PCRE library
+PCRE=$(SUPPORT)/pcre
+#undefine PCRE
+#PCRE_LIB=/usr/lib/x86_64-linux-gnu
+#PCRE_INCLUDE=/usr/include
+
+# EPICS support modules
+ASYN=$(SUPPORT)/asyn
+AUTOSAVE=$(SUPPORT)/autosave
+BUSY=$(SUPPORT)/busy
+CALC=$(SUPPORT)/calc
+IOCSTATS=$(SUPPORT)/iocStats
+IPAC=$(SUPPORT)/ipac
+LUA=$(SUPPORT)/lua
+MODBUS=$(SUPPORT)/modbus
+MOTOR=$(SUPPORT)/motor
+PCAS=$(SUPPORT)/pcas
+PVXS=$(SUPPORT)/pvxs
+S7PLC=$(SUPPORT)/s7plc
+SNCSEQ=$(SUPPORT)/seq
+SSCAN=$(SUPPORT)/sscan
+STD=$(SUPPORT)/std
+STREAM=$(SUPPORT)/StreamDevice
+SYMB=$(SUPPORT)/symb
+
+# The following must be defined for motorMXmotor
+#!MX=$(SUPPORT)/mx/mx
