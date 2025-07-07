@@ -5,7 +5,7 @@ record(stringin, "$(P)$(R)IDN")
 {
     field(DESC, "SCPI identification string")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getIDN(39) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getIDN(39) $(PORT) $(A)")
     field(PINI, "YES")
 }
 
@@ -13,7 +13,7 @@ record(waveform, "$(P)$(R)IDNwf")
 {
     field(DESC, "SCPI identification string")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getIDN(199) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getIDN(199) $(PORT) $(A)")
     field(PINI, "YES")
     field(FTVL, "CHAR")
     field(NELM, "200")
@@ -23,14 +23,14 @@ record(bo, "$(P)$(R)CLS")
 {
     field(DESC, "SCPI Clear status")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto cmd(*CLS) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto cmd(*CLS) $(PORT) $(A)")
 }
 
 record(longout, "$(P)$(R)SetESE")
 {
     field(DESC, "SCPI enable event status")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto setD(*ESE) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto setD(*ESE) $(PORT) $(A)")
     field(FLNK, "$(P)$(R)GetESE")
 }
 
@@ -38,7 +38,7 @@ record(longin, "$(P)$(R)GetESE")
 {
     field(DESC, "SCPI enabled event status")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(*ESE) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(*ESE) $(PORT) $(A)")
     field(PINI, "YES")
 }
 
@@ -46,7 +46,7 @@ record(longin, "$(P)$(R)GetESR")
 {
     field(DESC, "Standard Event Status Register")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(*ESR) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(*ESR) $(PORT) $(A)")
     field(PINI, "YES")
     #field(SCAN, "2 second")
 }
@@ -55,7 +55,7 @@ record(longin, "$(P)$(R)GetOPC")
 {
     field(DESC, "Output completion status")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(*OPC) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(*OPC) $(PORT) $(A)")
     field(PINI, "YES")
 }
 
@@ -63,7 +63,7 @@ record(longout, "$(P)$(R)SetPSC")
 {
     field(DESC, "Power-on Status Clear")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto setD(*PSC) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto setD(*PSC) $(PORT) $(A)")
     field(FLNK, "$(P)$(R)GetPSC")
 }
 
@@ -71,28 +71,28 @@ record(longin, "$(P)$(R)GetPSC")
 {
     field(DESC, "Power-on Status Clear")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(*PSC?) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(*PSC?) $(PORT) $(A)")
 }
 
 record(longout, "$(P)$(R)RCL")
 {
     field(DESC, "Recall Instrument Settings")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto setD(*PSC) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto setD(*PSC) $(PORT) $(A)")
 }
 
 record(bo, "$(P)$(R)RST")
 {
     field(DESC, "SCPI Reset")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto cmd(*RST) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto cmd(*RST) $(PORT) $(A)")
 }
 
 record(longout, "$(P)$(R)SetSRE")
 {
     field(DESC, "SCPI enable service requests")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto setD(*SRE) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto setD(*SRE) $(PORT) $(A)")
     field(FLNK, "$(P)$(R)GetSRE")
 }
 
@@ -100,14 +100,14 @@ record(longin, "$(P)$(R)GetSRE")
 {
     field(DESC, "Enabled service requests")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(*SRE) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(*SRE) $(PORT) $(A)")
 }
 
 record(longin, "$(P)$(R)GetSTB")
 {
     field(DESC, "SCPI get status byte")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(*STB) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(*STB) $(PORT) $(A)")
     field(PINI, "YES")
     #field(SCAN, "2 second")
 }
@@ -116,21 +116,21 @@ record(bo, "$(P)$(R)TRG")
 {
     field(DESC, "Trigger a Delay")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto cmd(*TRG) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto cmd(*TRG) $(PORT) $(A)")
 }
 
 record(longin, "$(P)$(R)GetTST")
 {
     field(DESC, "Self test")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(*TST) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(*TST) $(PORT) $(A)")
 }
 
 record(bo, "$(P)$(R)WAI")
 {
     field(DESC, "Wait for Command Execution")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto cmd(*WAI) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto cmd(*WAI) $(PORT) $(A)")
 }
 
 # Status and Display Commands
@@ -141,7 +141,7 @@ record(mbbo, "$(P)$(R)SHDP")
     field(ZRST, "Hide")
     field(ONST, "Show")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto setD(SHDP) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto setD(SHDP) $(PORT) $(A)")
 }
 
 record(mbbi, "$(P)$(R)SHDP_RBV")
@@ -150,7 +150,7 @@ record(mbbi, "$(P)$(R)SHDP_RBV")
     field(ZRST, "Hide")
     field(ONST, "Show")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(SHDP?) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(SHDP?) $(PORT) $(A)")
 }
 
 record(mbbi, "$(P)$(R)TIMB_RBV") {
@@ -160,7 +160,7 @@ record(mbbi, "$(P)$(R)TIMB_RBV") {
   field(TWST, "Rubidium timebase")
   field(THST, "External timebase")
   field(DTYP, "stream")
-  field(INP,  "@DG645.proto getD(TIMB) $(PORT) $(A)")
+  field(INP,  "@srs_DG645.proto getD(TIMB) $(PORT) $(A)")
   field(PINI, "YES")
 }
 
@@ -172,7 +172,7 @@ record(mbbo, "$(P)$(R)ADVT")
     field(ZRST, "Disable")
     field(ONST, "Enable")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto setD(*ADVT) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto setD(*ADVT) $(PORT) $(A)")
 }
 
 record(mbbi, "$(P)$(R)ADVT_RBV")
@@ -181,35 +181,35 @@ record(mbbi, "$(P)$(R)ADVT_RBV")
     field(ZRST, "Disable")
     field(ONST, "Enable")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(*ADVT) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(*ADVT) $(PORT) $(A)")
 }
 
 record(ao, "$(P)$(R)HOLD")
 {
     field(DESC, "Set Holdoff")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto setD(*ADVT) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto setD(*ADVT) $(PORT) $(A)")
 }
 
 record(ai, "$(P)$(R)HOLD_RBV")
 {
     field(DESC, "Get Holdoff")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(*ADVT) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(*ADVT) $(PORT) $(A)")
 }
 
 record(longout, "$(P)$(R)SetINHB")
 {
     field(DESC, "Get inhibit")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto setD(*SRE) $(PORT) $(A)")
+    field(OUT,  "@srs_DG645.proto setD(*SRE) $(PORT) $(A)")
 }
 
 record(longin, "$(P)$(R)GetINHB")
 {
     field(DESC, "Set inhibit")
     field(DTYP, "stream")
-    field(INP,  "@DG645.proto getD(*SRE) $(PORT) $(A)")
+    field(INP,  "@srs_DG645.proto getD(*SRE) $(PORT) $(A)")
 }
 
 record(mbbo, "$(P)$(R)TSRC") {
@@ -217,12 +217,12 @@ record(mbbo, "$(P)$(R)TSRC") {
   field(ZRST, "Internal")
   field(ONST, "External rising edge")
   field(TWST, "External falling edge")
-  field(THST, "Single shot external rising")
-  field(FRST, "Single shot external falling")
+  field(THST, "Single shot ext. rising")
+  field(FRST, "Single shot ext. falling")
   field(FVST, "Single shot")
   field(SXST, "Line")
   field(DTYP, "stream")
-  field(OUT,  "@DG645.proto setD(TSRC) $(PORT) $(A)")
+  field(OUT,  "@srs_DG645.proto setD(TSRC) $(PORT) $(A)")
   field(FLNK, "$(P)$(R)TSRC_RBV")
 }
 
@@ -231,12 +231,12 @@ record(mbbi, "$(P)$(R)TSRC_RBV") {
   field(ZRST, "Internal")
   field(ONST, "External rising")
   field(TWST, "External falling ")
-  field(THST, "Single shot external rising")
-  field(FRST, "Single shot external falling")
+  field(THST, "Single shot ext. rising")
+  field(FRST, "Single shot ext. falling")
   field(FVST, "Single shot")
   field(SXST, "Line")
   field(DTYP, "stream")
-  field(INP,  "@DG645.proto getD(TSRC) $(PORT) $(A)")
+  field(INP,  "@srs_DG645.proto getD(TSRC) $(PORT) $(A)")
   field(PINI, "YES")
 }
 
@@ -292,7 +292,7 @@ record(ao, "$(P)$(R)DLAY")
 {
     field(DESC, "Set delay")
     field(DTYP, "stream")
-    field(OUT,  "@DG645.proto delay($(P)$(R)) $(PORT) $(A)")  
+    field(OUT,  "@srs_DG645.proto delay($(P)$(R)) $(PORT) $(A)")  
     field(VAL,1e-6)
     field(EGU,"s")
     field (PREC, "9")
